@@ -46,11 +46,11 @@ def goodMin(m):
 def handleTime():
     t = datetime.datetime.today()
     if goodMin(t.minute) and goodHour(t.hour):
-        GPIO.output(pumpPin, GPIO.HIGH)
-        print 'time is %s hour %s min, should be HIGH' % (t.hour, t.minute)
-    else:
         GPIO.output(pumpPin, GPIO.LOW)
         print 'time is %s hour %s min, should be LOW' % (t.hour, t.minute)
+    else:
+        GPIO.output(pumpPin, GPIO.HIGH)
+        print 'time is %s hour %s min, should be HIGH' % (t.hour, t.minute)
 
 GPIO.setup(pumpPin, GPIO.OUT)
 GPIO.output(pumpPin, GPIO.HIGH)
