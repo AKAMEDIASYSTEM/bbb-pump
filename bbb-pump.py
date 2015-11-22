@@ -10,7 +10,7 @@ import subprocess
 import re
 import Adafruit_BBIO.GPIO as GPIO
 
-pumpPin = 'P8_26'
+pumpPin = 'P9_26'
 startHour = 8
 stopHour = 20
 startMin = 1
