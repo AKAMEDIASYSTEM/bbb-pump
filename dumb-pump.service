@@ -1,0 +1,13 @@
+[Unit]
+Description=AKA DUMB PUMP service
+
+[Service]
+Type=simple
+WorkingDirectory=/root/bbb-pump/
+ExecStart=/usr/bin/python bbb-pump.py
+Restart=always
+RestartSec=5
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
